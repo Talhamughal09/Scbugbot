@@ -1,10 +1,11 @@
-//base by Zain (Zain Bot Inc.)
-//YouTube: @zainibhaii
-//Instagram: unicorn_
-//Telegram: t.me/darkheartoffical
-//GitHub: @Zainnawab9
+//base by DGXeon (Xeon Bot Inc.)
+//YouTube: @Zainibhaii
+//Instagram: Zain_nawab97
+//Telegram: t.me/zainibhaii
+//GitHub: @Zainnawab69
 //WhatsApp: +923074060856
-//want more free bot scripts? subscribe to my youtube channel: https://youtu.be/TnUAvasM-1k
+//want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@Zainibhaii
+
 require('./settings')
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
@@ -16,7 +17,7 @@ const axios = require('axios')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetch, await, sleep, reSize } = require('./lib/myfunc')
-const { default: XeonBotIncConnect, delay, PHONENUMBER_MCC, makeCacheableSignalKeyStore, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@whiskeysockets/baileys")
+const { default: XeonBotIncConnect, delay, PHONENUMBER_MCC, makeCacheableSignalKeyStore, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto, Browsers} = require("@whiskeysockets/baileys")
 const NodeCache = require("node-cache")
 const Pino = require("pino")
 const readline = require("readline")
@@ -47,13 +48,11 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
     const XeonBotInc = makeWASocket({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: !pairingCode, // popping up QR in terminal log
-      mobile: useMobile, // mobile api (prone to bans)
-      browser: ['Chrome (Linux)', '', ''], // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
+      browser: Browsers.windows('Firefox'), // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
      auth: {
          creds: state.creds,
          keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
       },
-      browser: ['Chrome (Linux)', '', ''], // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
       markOnlineOnConnect: true, // set false for offline
       generateHighQualityLinkPreview: true, // make high preview link
       getMessage: async (key) => {
@@ -87,9 +86,9 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
 
          // Ask again when entering the wrong number
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +916909137213")))
+            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +923074060856")))
 
-            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 😍\nFor example: +923074060856 : `)))
+            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 😍\nFor example: +92307406085637213 : `)))
             phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
             rl.close()
          }
@@ -108,18 +107,23 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
             const mek = chatUpdate.messages[0]
             if (!mek.message) return
             mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
-            if (mek.key && mek.key.remoteJid === 'status@broadcast'){
-            if (autoread_status) {
-            await XeonBotInc.readMessages([mek.key]) 
-            }
-            } 
+            if (mek.key && mek.key.remoteJid === 'status@broadcast' )
             if (!XeonBotInc.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
             if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
             const m = smsg(XeonBotInc, mek, store)
-            require("./XeonBug3")(XeonBotInc, m, chatUpdate, store)
+            require("./XeonBug6")(XeonBotInc, m, chatUpdate, store)
         } catch (err) {
             console.log(err)
         }
+    })
+    
+    //autostatus view
+        XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
+        	if (global.autoswview){
+            mek = chatUpdate.messages[0]
+            if (mek.key && mek.key.remoteJid === 'status@broadcast') {
+            	await XeonBotInc.readMessages([mek.key]) }
+            }
     })
 
    
@@ -171,9 +175,9 @@ XeonBotInc.ev.on("connection.update",async  (s) => {
 			await delay(1999)
             console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${botname} ]`)}\n\n`))
             console.log(chalk.cyan(`< ================================================== >`))
-	        console.log(chalk.magenta(`\n${themeemoji} YT CHANNEL: Xeon`))
+	        console.log(chalk.magenta(`\n${themeemoji} YT CHANNEL: Zainibhaii`))
             console.log(chalk.magenta(`${themeemoji} GITHUB: Zainnawab69 `))
-            console.log(chalk.magenta(`${themeemoji} INSTAGRAM: @zanibhai `))
+            console.log(chalk.magenta(`${themeemoji} INSTAGRAM: @Zain_nawab97 `))
             console.log(chalk.magenta(`${themeemoji} WA NUMBER: ${owner}`))
             console.log(chalk.magenta(`${themeemoji} CREDIT: ${wm}\n`))
         }
@@ -281,8 +285,10 @@ fs.watchFile(file, () => {
 
 process.on('uncaughtException', function (err) {
 let e = String(err)
+if (e.includes("conflict")) return
 if (e.includes("Socket connection timeout")) return
-if (e.includes("item-not-found")) return
+if (e.includes("not-authorized")) return
+if (e.includes("already-exists")) return
 if (e.includes("rate-overlimit")) return
 if (e.includes("Connection Closed")) return
 if (e.includes("Timed Out")) return

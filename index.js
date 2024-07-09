@@ -1,10 +1,11 @@
 //base by DGXeon (Xeon Bot Inc.)
+//re-upload? recode? copy code? give credit ya :)
 //YouTube: @Zainibhaii
-//Instagram: zainibhaii
-//Telegram: t.me/darkheartoffical
+//Instagram: Zain_nawab97
+//Telegram: t.me/zainibhaii
 //GitHub: @Zainnawab69
 //WhatsApp: +923074060856
-//want more free bot scripts? subscribe to my youtube channel: https://youtu.be/TnUAvasM-1k
+//want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@Zainibhaii
 
 const {
    spawn
