@@ -923,7 +923,7 @@ senddocu(buffer)
                                 showAdAttribution: true,
                                 title: 'Broadcast By Owner',
                                 body: `Sent ${i.length} Group`,
-                                thumbnailUrl: 'https://telegra.ph/file/c02035e9c30f7b6da1b29.jpg',
+                                thumbnailUrl: 'https://ibb.co/DgNNCFL',
                                 sourceUrl: global.link,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -1231,7 +1231,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                             showAdAttribution: true,
                             title: `${botname}`,
                             body: `${latensi.toFixed(4)} Second`,
-                            thumbnailUrl: 'https://i.ibb.co/dQkXV2Y/Picsart-23-10-10-18-28-51-982.jpg',
+                            thumbnailUrl: 'https://i.ibb.co/KzYYqgm/ic-today-get-credits.jpg',
                             sourceUrl: global.link,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -1253,7 +1253,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                             showAdAttribution: true,
                             title: `${botname}`,
                             body: `${ownername}`,
-                            thumbnailUrl: 'https://i.ibb.co/dQkXV2Y/Picsart-23-10-10-18-28-51-982.jpg',
+                            thumbnailUrl: 'https://i.ibb.co/KzYYqgm/ic-today-get-credits.jpg',
                             sourceUrl: global.link,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -1273,7 +1273,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                             showAdAttribution: true,
                             title: `${botname}`,
                             body: `FORGET DONATE`,
-                            thumbnailUrl: 'https://i.ibb.co/dQkXV2Y/Picsart-23-10-10-18-28-51-982.jpg',
+                            thumbnailUrl: 'https://ibb.co/DgNNCFL',
                             sourceUrl: global.link,
                             mediaType: 1,
                             renderLargerThumbnail: true
@@ -1292,8 +1292,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                         externalAdReply: {
                             showAdAttribution: true,
                             title: `${botname}`,
-                            body: `SCRIPT OF ${botname} is on YouTube @DGXeon`,
-                            thumbnailUrl: 'https://i.ibb.co/dQkXV2Y/Picsart-23-10-10-18-28-51-982.jpg',
+                            body: `SCRIPT OF ${botname} is on YouTube @Darkaridrop`,
+                            thumbnailUrl: 'https://ibb.co/DgNNCFL',
                             sourceUrl: global.link,
                             mediaType: 1,
                             renderLargerThumbnail: true
