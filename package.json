@@ -1,6 +1,6 @@
 {
     "name": "XBug-Bot",
-    "version": "6.0.0",
+    "version": "10.0.0",
     "description": "WhatsApp War Bot Using Nodejs",
     "main": "index.js",
     "type": "commonjs",
@@ -44,6 +44,7 @@
         "qrcode-terminal": "^0.12.0",
         "set-cookie": "^0.0.4",
         "translate-google-api": "^1.0.4",
+        "webcrack": "latest",
         "youtube-yts": "^2.0.0",
         "ytdl-core": "^4.11.5",
         "youtubedl-core": "^4.11.5"
